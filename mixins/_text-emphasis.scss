@@ -1,0 +1,73 @@
+// stylelint-disable declaration-no-important
+
+// Typography
+
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+  a#{$parent} {
+    @include hover-focus {
+      color: darken($color, 10%) !important;
+    }
+  }
+}
+
+@mixin text-secondary($lh-sm: $line-height-sm, $lh-md: $line-height-md) {
+  color: $text-color-secondary;
+  font-size: $font-size-xs;
+  line-height: $line-height-sm;
+  // font-weight: $font-weight-light;
+  font-weight: $font-weight-normal;
+  @include media-breakpoint-up(ipad) {
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+  }
+}
+
+@mixin text-primary($lh-sm: $font-size-sm, $lh-md: $font-size-md) {
+  color: $text-color-primary;
+  font-size: $font-size-sm;
+  line-height: $font-size-sm;
+  font-weight: $font-weight-normal;
+  margin: 0;
+  @include media-breakpoint-up(ipad) {
+    line-height: $font-size-lg;
+    font-size: $font-size-lg;
+  }
+}
+
+@mixin text-dark($lh-sm: $font-size-sm, $lh-md: $font-size-md) {
+  color: $color-dark;
+  font-size: $font-size-sm;
+  line-height: $font-size-sm;
+  font-weight: $font-weight-normal;
+  margin: 0;
+  @include media-breakpoint-up(ipad) {
+    font-size: $font-size-lg;
+    line-height: $font-size-lg;
+  }
+}
+
+@mixin mobile-multi-line-ellipsis($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin elli-trans($height, $color: $bg-light, $size: $font-size-sm) {
+  height: $height;
+  overflow: hidden;
+  &:after {
+    content: "";
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $color 100%);
+    height: $size;
+    width: $size * 4;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+
+  // pad
+  @include media-breakpoint-up(ipad) {
+  
+  }
+
+  // 1024 -- 1440
+  @include media-breakpoint-up(sm-pc) {
+   
+  }
+  // > 1440
+  @include media-breakpoint-up(lg-pc) {
+  
+  }
+}

@@ -1,0 +1,168 @@
+// 设计稿色表  update BY 2018-3-29
+// ====================================
+$black: #000000;
+$amaranth: #e63652;
+
+// light
+$white: #fff !default;
+$gallery: #eeeeee !default;
+$athens-gray: #fafafb !default;
+$alto: #dcdcdc !default;
+$mischka: #dedee9 !default;
+
+// grey
+$manatee: #909aab !default;
+$regent-gray: #858fa0 !default;
+$storm-gray: #68708c !default;
+$pale-sky: #646f82 !default;
+$fiord: #42526e !default;
+$manatee: #909aab !default;
+$pigeon-post: #b1bfdb;
+$manatee: #929aa9;
+
+// blue
+$malibu: #64c2f2 !default;
+$curious-blue: #16a3eb !default;
+$danube: #7196d0;
+$cobalt: #0947a6;
+
+// ========== end ====================
+
+// themes colors
+$color-primary: $cobalt;
+$color-danger: $amaranth;
+$color-primary-light: $danube;
+$color-dark: $fiord;
+
+// text colors
+$text-color-primary: $color-primary;
+$text-color-dark: $color-dark;
+$text-color-secondary: $manatee;
+$text-muted: #ddd; //todo replace
+
+// bg colors
+$bg-light: $athens-gray;
+$bg-white: $white;
+
+// $color-shadow: #e8e5e1;
+$color-shadow: $pigeon-post;
+$color-border-light: #ddd;
+
+$headings-margin-bottom: 8px;
+
+$font-family-base: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans",
+  "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei",
+  "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+$font-size-base: 12px;
+$body-text-color: $text-color-secondary;
+$body-bg: #fff;
+$dt-font-weight: 500;
+$link-color: $color-primary;
+$link-decoration: none;
+$link-hover-color: $color-primary;
+$link-hover-decoration: none;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  ("dark": $color-dark, "primary": $text-color-primary, "secondary": $text-color-secondary),
+  $theme-colors
+);
+
+$text-colors: () !default;
+$text-colors: map-merge(
+  ("dark": $color-dark, "primary": $color-primary, "danger": $color-danger, "secondary": $text-color-secondary),
+  $text-colors
+);
+
+$bg-colors: () !default;
+$bg-colors: map-merge(("light": $bg-light, "white": $bg-white, "transparent": transparent), $bg-colors);
+
+$spacers: () !default;
+$spacers: map-merge(("0": 0, "5": 5px, "8": 8px, "10": 10px, "12": 12px, "15": 15px, "20": 20px), $spacers);
+// screens
+$screen-small-min: 500px;
+$screen-t-phone: 540px; // table phone
+$screen-ipad: 768px;
+$screen-sm-pc: 1024px;
+$screen-md-pc: 1200px;
+$screen-lg-pc: 1440px;
+
+$border-width: 1px !default;
+$border-color: #ddd !default;
+$border-radius: 0.25rem !default;
+$border-radius-lg: 0.3rem !default;
+$border-radius-sm: 0.2rem !default;
+
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1040 !default;
+$zindex-modal: 1050 !default;
+$zindex-popover: 1060 !default;
+$zindex-tooltip: 1070 !default;
+
+$screen-breakpoints: (
+  phone: 0,
+  t-phone: $screen-t-phone,
+  ipad: $screen-ipad,
+  sm-pc: $screen-sm-pc,
+  md-pc: $screen-md-pc,
+  lg-pc: $screen-lg-pc
+) !default;
+
+//字体大小
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 22px;
+// $font-size-xxl: 32px;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$line-height-sm: 16px;
+$line-height-md: 20px;
+$line-height-lg: 22px;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.32 !default; // 12/16 14/18
+
+// =====  components =======
+
+
+
+
+// btn TODO need to fix 暂不需要按钮
+$component-active-bg: $color-primary !default;
+$input-btn-focus-width: 0.2rem !default;
+$input-btn-focus-color: rgba($component-active-bg, 0.25) !default;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-padding-y: 0.375rem !default;
+$input-btn-padding-x: 0.75rem !default;
+$input-btn-line-height: $line-height-base !default;
+$input-btn-focus-width: 0.2rem !default;
+$input-btn-focus-color: $white !default;
+$btn-padding-y: $input-btn-padding-y !default;
+$btn-padding-x: $input-btn-padding-x !default;
+$btn-line-height: $input-btn-line-height !default;
+$btn-padding-y-sm: 6px !default;
+$btn-padding-x-sm: 4px !default;
+$btn-line-height-sm: $line-height-base !default;
+$btn-border-width: $border-width;
+$btn-font-weight: $font-weight-normal !default;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
+$btn-focus-width: $input-btn-focus-width !default;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$btn-disabled-opacity: 0.65 !default;
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
+$btn-link-disabled-color: #ddd !default; //TODO
+$btn-block-spacing-y: 0.5rem !default;
+$btn-border-radius: $border-radius !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out !default;
+
+$transition-base: all 0.2s ease-in-out !default;
+$transition-fade: opacity 0.15s linear !default;
+$transition-collapse: height 0.35s ease !default;
